@@ -8,13 +8,13 @@ class ImdbSpider(scrapy.Spider):
 
     def parse(self, response):
         cast_page = response.url + 'fullcredits/'
-        yield scrapy.Request(url=cast_page, callback=self.parse_full_credits)
+        yield scrapy.Request(cast_page, self.parse_full_credits)
 
     def parse_full_credits(self, response):
         actor_lists = [a.attrib["href"] for a in response.css("td.primary_photo a")]
         for ele in actor_lists:
             actor_page = 'https://www.imdb.com' + ele
-            yield scrapy.Request(url=actor_page, callback=self.parse_actor_page)
+            yield scrapy.Request(actor_page, self.parse_actor_page)
     
     def parse_actor_page(self, response):
         actor_name = response.css('title::text')[0].get().split(' -')[0]
