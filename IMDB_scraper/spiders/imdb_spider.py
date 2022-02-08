@@ -4,7 +4,7 @@ import scrapy
 
 class ImdbSpider(scrapy.Spider):
     name = 'imdb_spider'
-    start_urls = ['https://www.imdb.com/title/tt6208148/']
+    start_urls = ['https://www.imdb.com/title/tt6450804/']
 
     def parse(self, response):
         yield scrapy.Request(response.url + 'fullcredits/', self.parse_full_credits)

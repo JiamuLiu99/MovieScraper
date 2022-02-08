@@ -1,0 +1,6 @@
+IMDB_scraper/__pycache__/__init__.cpython-37.pyc
+IMDB_scraper/__pycache__/settings.cpython-37.pyc
+IMDB_scraper/spiders/__pycache__/__init__.cpython-37.pyc
+IMDB_scraper/spiders/__pycache__/imdb_spider.cpython-37.pyc
+.ipynb_checkpoints/results-checkpoint.csv
+.ipynb_checkpoints/make-checkpoint.ipynb
